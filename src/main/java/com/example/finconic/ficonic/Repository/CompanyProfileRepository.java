@@ -15,7 +15,6 @@ public interface CompanyProfileRepository extends MongoRepository<CompanyProfile
 	List<CompanyProfileData> findByCin(String cin);
 	
 
-	//@Query("{$or:[{'cin': {$regex: ?0, $options: 'i'}}, {'companyProfile.companyName': {$regex: ?0, $options: 'i'}}]}")
 	@Aggregation(pipeline = {
             "{$match: {$or:[{'cin': {$regex: ?0, $options: 'i'}}, {'companyProfile.companyName': {$regex: ?0, $options: 'i'}}]}}",
             "{$limit: 5}"
