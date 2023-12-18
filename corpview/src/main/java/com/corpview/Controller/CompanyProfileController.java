@@ -12,8 +12,6 @@ import java.util.List;
 @RestController
 public class CompanyProfileController {
 
-//	@Autowired
-//	private CompanyProfileService companyProfileService;
 	
 	private final CompanyProfileService companyProfileService;
 

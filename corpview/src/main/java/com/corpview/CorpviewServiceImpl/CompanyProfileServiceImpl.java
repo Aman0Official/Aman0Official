@@ -18,9 +18,6 @@ public class CompanyProfileServiceImpl implements CompanyProfileService {
 
 	private static final Logger log = LoggerFactory.getLogger(CompanyProfileServiceImpl.class);
 
-//     @Autowired
-//	 private  CompanyProfileRepository companyProfileRepository;
-
 	private final CompanyProfileRepository companyProfileRepository;
 
 	public CompanyProfileServiceImpl(CompanyProfileRepository companyProfileRepository) {

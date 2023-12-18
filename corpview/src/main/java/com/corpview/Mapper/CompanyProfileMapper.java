@@ -9,14 +9,13 @@ import com.corpview.Entity.CompanyProfileData;
 
 @Mapper
 public interface CompanyProfileMapper {
-	
 
-        CompanyProfileMapper INSTANCE = Mappers.getMapper(CompanyProfileMapper.class);
+	CompanyProfileMapper INSTANCE = Mappers.getMapper(CompanyProfileMapper.class);
 
-        @Mapping(source = "companyProfile.companyName", target = "companyName", defaultValue = "NULL")
-        @Mapping(source = "companyProfile.companyStatus", target = "companyStatus", defaultValue = "NULL")
-        @Mapping(source = "companyProfile.rocCode", target = "rocCode", defaultValue = "NULL")
-        @Mapping(source = "cin", target = "cin", defaultValue = "NULL")
-	    CompanyDetailsDTO limitedDto(CompanyProfileData companyProfileData);
+	@Mapping(source = "companyProfile.companyName", target = "companyName", defaultValue = "NULL")
+	@Mapping(source = "companyProfile.companyStatus", target = "companyStatus", defaultValue = "NULL")
+	@Mapping(source = "companyProfile.rocCode", target = "rocCode", defaultValue = "NULL")
+	@Mapping(source = "cin", target = "cin", defaultValue = "NULL")
+	CompanyDetailsDTO limitedDto(CompanyProfileData companyProfileData);
 
 }
