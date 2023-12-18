@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
-public class FinconicApplication implements CommandLineRunner{
+public class FinconicApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FinconicApplication.class, args);
@@ -15,8 +15,7 @@ public class FinconicApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		
-		
+
 	}
 
 }

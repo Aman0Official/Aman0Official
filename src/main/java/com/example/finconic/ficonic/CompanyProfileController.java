@@ -18,24 +18,21 @@ import java.util.stream.Collectors;
 public class CompanyProfileController {
 
 	@Autowired
-    private  CompanyProfileRepository companyProfileRepository;
+	private CompanyProfileRepository companyProfileRepository;
 
-    @GetMapping("companyDetails")
-    public List<CompanyDetailsDTO> getCompanyDetails(@RequestParam String searchValue) {
-        return companyProfileRepository.findByCinOrCompanyProfileCompanyName(searchValue)
-                .stream()
-                .map(this::convertToDTO)
-                .collect(Collectors.toList());
-    }
+	@GetMapping("companyDetails")
+	public List<CompanyDetailsDTO> getCompanyDetails(@RequestParam String searchValue) {
+		return companyProfileRepository.findByCinOrCompanyProfileCompanyName(searchValue).stream()
+				.map(this::convertToDTO).collect(Collectors.toList());
+	}
 
-    private CompanyDetailsDTO convertToDTO(CompanyProfileData profileData) {
-        CompanyDetailsDTO dto = new CompanyDetailsDTO();
-        dto.setCompanyName(profileData.getCompanyProfile().getCompanyName());
-        dto.setCompanyStatus(profileData.getCompanyProfile().getCompanyStatus());
-        dto.setRocCode(profileData.getCompanyProfile().getRocCode());
-        dto.setCin(profileData.getCin());
-        return dto;
-    }
-	
-	
+	private CompanyDetailsDTO convertToDTO(CompanyProfileData profileData) {
+		CompanyDetailsDTO dto = new CompanyDetailsDTO();
+		dto.setCompanyName(profileData.getCompanyProfile().getCompanyName());
+		dto.setCompanyStatus(profileData.getCompanyProfile().getCompanyStatus());
+		dto.setRocCode(profileData.getCompanyProfile().getRocCode());
+		dto.setCin(profileData.getCin());
+		return dto;
+	}
+
 }
