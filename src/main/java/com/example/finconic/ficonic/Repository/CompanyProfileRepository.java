@@ -4,10 +4,8 @@ import java.util.*;
 
 import org.springframework.data.mongodb.repository.Aggregation;
 import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.data.mongodb.repository.Query;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import com.example.finconic.finconic.Entity.CompanyProfile;
 import com.example.finconic.finconic.Entity.CompanyProfileData;
 import com.example.finconic.finconic.Entity.CompanyProfileProjection;
 
@@ -26,5 +24,5 @@ public interface CompanyProfileRepository extends MongoRepository<CompanyProfile
 	
 	
 	
-	
+
 }
